@@ -1,0 +1,453 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+/* ====================================
+    Globals
+===================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font: 500 16px/1.5 'Roboto', sans-serif;
+    background-color: hsl(0,0%,100%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+}
+
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.justify-space-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.col-1-2 {
+    flex: 0 1 49%;
+    margin: 20px auto;
+}
+
+.col-50 {
+    flex: 0 1 50%;
+}
+
+.col-40 {
+    flex: 0 1 36%;
+}
+
+.col-60 {
+    flex: 0 1 58%;
+}
+
+.col-1-3 {
+    flex: 0 1 32%;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: '';
+    display: table;
+}
+
+.clearfix::after {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+    width: 75%;
+    height: 100%;
+}
+
+/* ====================================
+    Typography
+===================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #fff;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 64px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #000;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 52px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h6 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgb(92, 91, 91);
+}
+
+p {
+    font-weight: 300;
+    color: rgb(92, 91, 91);
+}
+
+/* ====================================
+Links
+===================================== */
+
+a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: .5px;
+    display: inline-block;
+}
+
+/* ====================================
+    Button
+===================================== */
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 2px;
+    background-color: hsl(9,83%,58%);
+}
+
+/* ====================================
+    Header
+===================================== */
+
+
+header {
+    background-color: hsla(212,7%,43%,0.8);
+    position: fixed;
+    width: 100%;
+    left: 0;
+    z-index: 999;
+}
+
+.orange,
+.active.active {
+    color: hsl(9,83%,58%);
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+.hero {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* ====================================
+    Main
+===================================== */
+
+.contain {
+    position: relative;
+}
+
+video {
+    width: 100%;
+}
+
+.hero {
+    background-color: hsla(207,12%,32%, 0.8);
+    padding: 20px;
+    width: 100%;
+    height: 99.5%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.hero-info {
+    position: relative;
+    top: 250px;
+}
+
+.hero h4,
+.hero h1,
+.hero a {
+    margin: 20px;
+}
+
+.section-heading {
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+}
+
+.section-heading h2 {
+    text-transform: uppercase;
+}
+
+.section-heading * {
+    margin: 5px auto;
+}
+
+.program,
+.program-info {
+    margin: 30px auto;
+}
+
+.program-info h4 {
+    color: rgb(43, 42, 42);
+    letter-spacing: 1px;
+}
+
+.program-info h4,
+.program-info p,
+.program-info a {
+    margin-bottom: 5px;
+}
+
+.program-info a {
+    color: hsl(9,83%,58%);
+}
+
+.program-info .blue {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: rgba(78, 78, 206, 0.568);
+}
+
+.banner {
+    background-image: url(../images/cta-bg.jpg);
+    padding: 60px;
+}
+
+.banner-content {
+    padding: 20px 100px;
+    text-align: center;
+}
+
+.banner-content * {
+    margin: 20px auto;
+}
+
+.banner-content p,
+.banner-content a {
+    color: #fff;
+    font-size: 20px;
+}
+
+.features,
+.timetable-section,
+.experts {
+    margin: 60px auto;
+}
+
+.col-40 li {
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 5px rgba(59, 59, 59, 0.11);
+}
+
+.col-40 li * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.col-40 h6 {
+    margin-left: 20px;
+}
+
+.col-40 a {
+    width: 100%;
+    padding: 20px 50px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+.col-60 {
+    margin: 20px 0;
+}
+
+.col-60 img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.col-60 * {
+    margin-bottom: 15px;
+}
+
+.col-60 a {
+    font-size: 18px;
+}
+
+.timetable-section {
+    padding: 60px 0;
+    background: hsla(207,12%,32%, 0.8) url(../images/schedule-bg.jpg);
+}
+
+.timetable-section h2,
+.timetable-section p {
+    color: #fff;
+}
+
+.timetable-nav,
+table {
+    margin: 60px auto;
+}
+
+.timetable-nav li {
+    margin: 12px 20px;
+}
+
+.timetable-nav a,
+.timetable-nav li {
+    margin: 0 10px;
+    font-size: 20px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+table,
+th,
+td {
+    border: 2px solid #fff;
+    border-collapse: collapse;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    padding: 35px 60px;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.expert {
+    padding: 20px;
+    box-shadow: 0 0 10px 5px rgba(59, 59, 59, 0.15);
+}
+
+.expert * {
+    margin: 5px 0;
+}
+
+.expert img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.expert h4,
+.social-account-trainer a {
+    color: rgb(24, 23, 23);
+    font-size: 20px;
+}
+
+.expert span {
+    font-size: 14px;
+}
+
+.expert h4 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+.social-account-trainer li {
+    margin-right: 20px;
+}
+
+.form {
+    background: url(../images/contact-bg.jpg) no-repeat;
+    background-size: cover;
+    padding: 60px;
+}
+
+form {
+    background: #fff;
+    color: rgba(36, 34, 34, 0.548);
+    font-size: 18px;
+    font-weight: 300;
+    border-radius: 10px;
+    padding: 25px;
+}
+
+input,
+textarea {
+    font-family: inherit;
+    display: inline-block;
+    border: 1px solid rgba(36, 34, 34, 0.548);
+}
+
+input[name="name"],
+input[name="email"] {
+    width: 41%;
+    margin: 12px 4%;
+    padding: 12px;
+}
+
+input[name="subject"],
+textarea {
+    width: 91%;
+    margin: 12px 2% 12px 4%;
+    padding: 12px;
+}
+
+form a {
+    margin: 15px 4%;
+}
+
+/* ====================================
+    Footer
+===================================== */
+
+footer {
+    padding: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(32, 32, 32, 0.651);
+}
+
+footer a {
+    text-transform: capitalize;
+}
