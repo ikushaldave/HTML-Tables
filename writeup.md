@@ -321,7 +321,7 @@ In this case, `border-collapse` property comes in handy. The border-collapse pro
 table {
   border-collapse: collapse;
 }
-table,
+
 th,
 td {
   border: 2px solid #272727;
@@ -341,6 +341,7 @@ table {
   border-spacing: 4px;
 }
 
+table,
 th,
 td {
   border: 2px solid #272727;
